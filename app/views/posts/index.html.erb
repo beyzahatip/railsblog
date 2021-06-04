@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+
+<h3>Posts</h3>
+
+
+    <% @posts.each do |post| %>
+      <tr>
+        <h4><%= link_to post.title, post %></h4>
+        <p align="right">Posted <%= time_ago_in_words(post.created_at) %> ago </p >
+    <% end %>
+
+
+<br>
